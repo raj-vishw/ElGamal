@@ -3,20 +3,18 @@
 
 #include <boost/multiprecision/cpp_int.hpp>
 using namespace boost::multiprecision;
-std::random_device
-std::mt19937_64
 
-struct PublicKey(){
+struct PublicKey {
     cpp_int p, g, y;
-}
+};
 
-struct PrivateKey(){
+struct PrivateKey {
     cpp_int x;
-}
+};
 
-struct CipherText(){
+struct CipherText {
     cpp_int c1, c2;
-}
+};
 
 void generateKeys(PublicKey &pub, PrivateKey &priv);
 CipherText encrypt(cpp_int m, PublicKey pub);

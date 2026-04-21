@@ -29,7 +29,7 @@ cpp_int modInverse(cpp_int a, cpp_int mod){
         t = x0;
 
         x0 = x1-q*x0;
-        x1 = tl
+        x1 = t;
     }
     if(x1 < 0){
         x1 += m0;
